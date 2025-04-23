@@ -20,21 +20,11 @@ export default function Movie({ movie, director }) {
   );
 }
 
- 
 export async function getStaticPaths() {
   const { movies } = await fetchData();
-
-  const paths = movies.map((m) => ({
-    params: { id: m.id },
-  }));
-
-  return {
-    paths,
-   
-    fallback: blocking,
-  };
+  const paths = movies.map((m) => ({ params: { id: m.id } }));  
+  return { paths, fallback: "blocking" };
 }
-
 
 export async function getStaticProps({ params }) {
   const data = await fetchData();
