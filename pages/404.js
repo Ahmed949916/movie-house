@@ -11,7 +11,7 @@ export default function Custom404() {
         Page Not Found
       </Typography>
       <Typography variant='body1'>
-        The page you're looking for doesn't exist.
+      Oops! The page you&apos;re looking for isn&apos;t here.
       </Typography>
        
           <CustomButton href={"/"}variant='outlined' sx={{marginY:"20px",padding:"8px 16px",width:"300px"}}>Go To Home</CustomButton>
